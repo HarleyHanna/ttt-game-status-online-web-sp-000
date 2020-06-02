@@ -52,7 +52,13 @@ end
 def winner(board)
   winning_array = won?(board)
   winning_array_int = winning_array[0].to_i
-  return winning_array_int
+  if board[winning_array_int] == "X"
+    return "X"
+  elsif board[winning_array_int] == "O"
+    return "O"
+  else
+    return nil
+  end
 end
   
 
