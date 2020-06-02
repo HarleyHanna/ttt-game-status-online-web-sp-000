@@ -50,6 +50,8 @@ def over?(board)
 end
 
 def winner(board)
+  if won?(board) == false
+    return nil
   winning_array = won?(board)
   winning_array_int = winning_array[0].to_i
   if board[winning_array_int] == "X"
